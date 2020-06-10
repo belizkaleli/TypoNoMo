@@ -17,4 +17,4 @@ Typo URL phenomena poses many security threats. This issue is explained in detai
 This chrome extension detects possible typo URLs in your tweet text before you post it and warns you by pointing out the possible typo URL. You can go ahead and click "Continue" to ignore the warning or you can click "Cancel" to take one more look at your tweet before posting.
 The extension does not bother you if there are no possible typo URLs in your tweet.
 
-A Boston University [SeclaBU](https://seclab.bu.edu/) project.
+*A Boston University [SeclaBU](https://seclab.bu.edu/) project.*
