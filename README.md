@@ -11,7 +11,7 @@ __Tweet__: "Good for you.you're not blind and you can see!"
 __Typo URL__: "you.you"  
 
 ## Paper
-Typo URL phenomena pose many security threats. This issue is explained in detail in our paper. (put link)
+Typo URL phenomena poses many security threats. This issue is explained in detail in our paper. (put link)
 
 ## What does TypoNoMo do?
 This chrome extension detects possible typo URLs in your tweet text before you post it and warns you by pointing out the possible typo URL. You can go ahead and click "Continue" to ignore the warning or you can click "Cancel" to take one more look at your tweet before posting.
