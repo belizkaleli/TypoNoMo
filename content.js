@@ -923,9 +923,6 @@ function TweetButtonClicked(event) {
         mymodal.style.display = "block";
         spn.onclick = function() {
           mymodal.style.display = "none";
-          ignore = true;
-          button1.dispatchEvent(event);
-          ignore = false;
         }
 
         btnCancel.onclick = function() {
