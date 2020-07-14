@@ -821,9 +821,11 @@ function calculateFeatures(firstword, otherwords, i, urls, tld, url_elements_arr
 
 
 function TweetButtonClicked(event) {
+  var start = Date.now();
+  console.log('Tweet button clicked:', start);
 	if (ignore == false) {
 		event.stopPropagation();
-		console.log("Button1 innerText: " + button1.innerText);
+		//console.log("Button1 innerText: " + button1.innerText);
 		newTweet = true;
 		//alert("Button1 clicked");
 		var textElements = document.getElementsByClassName("public-DraftStyleDefault-block public-DraftStyleDefault-ltr");
@@ -918,7 +920,11 @@ function TweetButtonClicked(event) {
 					alertText += item.url + ' ';
 				});
 
-        p.innerHTML = 'WARNING! <br><br> You are about to post following url(s): ' + alertText;
+        var stop = Date.now();
+        console.log('Dialog created:', stop);
+        p.innerHTML = 'WARNING! <br><br> You are about to post following link(s): ' + alertText;
+
+        console.log('Processing Time:', (stop - start) / 1000, ' seconds');
 
         mymodal.style.display = "block";
         spn.onclick = function() {
@@ -935,19 +941,13 @@ function TweetButtonClicked(event) {
           button1.dispatchEvent(event);
           ignore = false;
         }
-
-
-
-				// if (confirm('Did you mean to type following url(s): ' + alertText)) {
-					// ignore = true;
-					// button1.dispatchEvent(event);
-					// ignore = false;
-				// }
-
 			} else {
         mymodal.style.display = "none";
         ignore = true;
         button1.dispatchEvent(event);
+        var stop = Date.now();
+        console.log('Tweet posted:', stop);
+        console.log('Processing Time:', (stop - start) / 1000, ' seconds');
         ignore = false;
       }
 		}
